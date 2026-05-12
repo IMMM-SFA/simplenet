@@ -17,8 +17,9 @@ DC modified-Ward network reduction toolbox.
   the full model's bus angles.
 
 It accepts MATPOWER `.m` files, the `matlab2*.xlsx` sheet workbook the
-TAMU workflow uses, or in-memory `pypower`-style dictionaries, and can
-be driven from Python or from a CLI.
+TAMU workflow uses, PSS/E `.RAW` v33 case files (the upstream format
+of the ACTIVSg synthetic grids), or in-memory `pypower`-style
+dictionaries, and can be driven from Python or from a CLI.
 
 ## At a glance
 

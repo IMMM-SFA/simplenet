@@ -48,6 +48,7 @@ Auto-detected by file extension:
 | --- | --- |
 | `.m` | [`load_m`][simplenet.io.matpower.load_m] |
 | `.xlsx` / `.xlsm` | [`load_xlsx`][simplenet.io.xlsx.load_xlsx] |
+| `.raw` / `.RAW` | [`load_raw`][simplenet.io.psse.load_raw] (PSS/E v33) |
 | `.json` | `PowerCase.from_pypower(json.load(...))` |
 
 ### Examples
@@ -113,6 +114,21 @@ re-solving the full DC PF.
 ```bash
 simplenet reduce case.xlsx excluded.csv -o reduced.xlsx --no-pf
 ```
+
+#### Starting from a PSS/E `.RAW` file
+
+```bash
+simplenet info ACTIVSg10k.RAW
+simplenet reduce ACTIVSg10k.RAW excluded.csv -o reduced.xlsx
+```
+
+`load_raw` targets the PSS/E v33 layout that the TAMU synthetic
+grids (`ACTIVSg10k.RAW`, `ACTIVSg70k.RAW`) emit, but also accepts
+v32 / v34 / v35. Two-winding transformers become MATPOWER branches
+with their tap ratio and phase shift; three-winding transformers
+expand into a synthetic star bus plus three equivalent branches (the
+same convention MATPOWER's `psse2mpc` uses). Switched-shunt initial
+setpoints are folded into each bus's `Bs`.
 
 #### Using a MATPOWER `.m` that delegates to xlsx
 

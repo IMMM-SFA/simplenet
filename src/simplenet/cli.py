@@ -11,6 +11,7 @@ import click
 from simplenet.case import PowerCase
 from simplenet.io.csv_loader import load_excluded_nodes
 from simplenet.io.matpower import load_m
+from simplenet.io.psse import load_raw
 from simplenet.io.xlsx import dump_xlsx, load_xlsx
 from simplenet.pipeline import reduce_network
 
@@ -26,6 +27,8 @@ def _load_case(path: Path) -> PowerCase:
     if suffix == ".json":
         data = json.loads(path.read_text())
         return PowerCase.from_pypower(data)
+    if suffix == ".raw":
+        return load_raw(path)
     raise click.UsageError(f"Unsupported case file extension: {suffix}")
 
 

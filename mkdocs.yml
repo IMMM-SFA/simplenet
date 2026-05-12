@@ -62,6 +62,7 @@ nav:
       - Load Redistribution: api/redistribute.md
       - I/O - MATPOWER: api/io_matpower.md
       - I/O - XLSX: api/io_xlsx.md
+      - I/O - PSS/E: api/io_psse.md
       - I/O - CSV: api/io_csv.md
       - CLI: api/cli.md
 
