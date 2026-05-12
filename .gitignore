@@ -1,3 +1,17 @@
+# Original MATLAB code and MATPOWER
+matlab/
+
+# System files
+.DS_Store
+.vscode/
+.idea/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.dmypy.json
+.python-version
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -70,6 +84,9 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+
+# MkDocs build output
+site/
 
 # PyBuilder
 .pybuilder/
