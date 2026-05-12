@@ -1,9 +1,14 @@
 # simplenet
 
-[![tests](https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml/badge.svg)](https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml)
-
-  
-[![docs](https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml/badge.svg)](https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml)
+<p align="left">
+  <a href="https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml">
+    <img src="https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml/badge.svg" alt="tests"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml">
+    <img src="https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml/badge.svg" alt="docs"/>
+  </a>
+</p>
 
 
 
