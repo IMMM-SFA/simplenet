@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: >-
   If you use simplenet in academic work, please cite this software using the
-  metadata in this file. We also recommend citing the original MATLAB toolbox
+  metadata in this file (including the Zenodo DOI below, which resolves to all
+  archived versions). We also recommend citing the original MATLAB toolbox
   that simplenet ports (Zhu & Tylavsky, 2018) and, where relevant, the
   synthetic test systems used for validation (Birchfield et al., 2017); both
   are listed under `references`.
@@ -24,6 +25,7 @@ date-released: "2026-05-12"
 license: BSD-3-Clause
 repository-code: "https://github.com/IMMM-SFA/simplenet"
 url: "https://immm-sfa.github.io/simplenet/"
+doi: 10.5281/zenodo.20144454
 keywords:
   - power-systems
   - network-reduction

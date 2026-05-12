@@ -8,6 +8,10 @@
   <a href="https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml">
     <img src="https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml/badge.svg" alt="docs"/>
   </a>
+  &nbsp;
+  <a href="https://doi.org/10.5281/zenodo.20144454">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20144454.svg" alt="DOI"/>
+  </a>
 </p>
 
 
