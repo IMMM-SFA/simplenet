@@ -1,7 +1,11 @@
 # simplenet
 
 [[![tests](https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml/badge.svg)](https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml)](https://github.com/IMMM-SFA/simplenet/actions/workflows/tests.yml)
+
+  
 [![docs]([https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml/badge.svg)](https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml)](https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml/badge.svg)](https://github.com/IMMM-SFA/simplenet/actions/workflows/docs.yml))
+
+
 
 A Python implementation of the [TAMU](https://electricgrids.engr.tamu.edu)
 DC modified-Ward network reduction toolbox. **Full documentation lives at
