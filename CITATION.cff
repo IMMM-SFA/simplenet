@@ -20,7 +20,7 @@ abstract: >-
   angles. The hand-rolled partial-LU factorisation of the MATLAB
   original is replaced with an algebraically equivalent Kron reduction
   implemented on top of scipy.sparse.
-version: "0.1.0a1"
+version: "0.1.1a0"
 date-released: "2026-05-12"
 license: BSD-3-Clause
 repository-code: "https://github.com/IMMM-SFA/simplenet"

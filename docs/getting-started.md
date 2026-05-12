@@ -92,6 +92,31 @@ robust to optional header rows in the numeric sheets.
 `ExcludedNodes` header row (the format used by the
 [expected_output sample](https://github.com/IMMM-SFA/simplenet/blob/main/matlab/expected_output/excluded_nodes.csv)).
 
+## Starting from a PSS/E `.RAW` file
+
+If the upstream source for your case is a PSS/E v33 raw file (the
+format the TAMU `ACTIVSg10k.RAW` / `ACTIVSg70k.RAW` synthetic grids
+ship in), `simplenet` reads it directly &mdash; no MATPOWER /
+`psse2mpc` conversion step is needed:
+
+```python
+from simplenet.io import load_raw
+from simplenet import reduce_network
+
+case = load_raw("ACTIVSg10k.RAW")
+result = reduce_network(case, excluded_bus_ids=[...])
+```
+
+[`load_raw`][simplenet.io.psse.load_raw] populates bus / generator /
+branch matrices using the MATPOWER v2 column conventions. Two-winding
+transformers become branches with their tap ratio and phase shift;
+three-winding transformers expand into a synthetic star bus plus
+three equivalent branches (matching MATPOWER's `psse2mpc`).
+Switched-shunt initial setpoints are folded into each bus's `Bs`.
+PSS/E sections that the DC reduction does not need (HVDC / VSC lines,
+FACTS, impedance correction, multi-section line groupings, etc.) are
+parsed defensively and otherwise ignored.
+
 ## Using a pypower-style dict
 
 If you already have a case represented as a pypower-style dict you can

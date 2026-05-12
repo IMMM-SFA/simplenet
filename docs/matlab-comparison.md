@@ -256,11 +256,18 @@ up to the algorithm tolerances discussed above.
 
 ## Inputs the MATLAB code accepts that `simplenet` does **not**
 
-- **PSS/E `.RAW` files** (`ACTIVSg10k.RAW`, etc.). The MATLAB workflow
-  reads these via MATPOWER's `loadcase` (which delegates to `psse2mpc`).
-  `simplenet` only reads MATPOWER `.m` and `matlab2*.xlsx` directly.
-  If you need to start from a `.RAW` file, convert it once with
-  MATPOWER (or `pypower`) and persist the result as `.m` or xlsx.
+`simplenet` reads the same input formats the MATLAB workflow does
+&mdash; MATPOWER `.m` files, `matlab2*.xlsx` workbooks, and PSS/E
+`.RAW` v33 case files via [`load_raw`][simplenet.io.psse.load_raw].
+There are no remaining input-format gaps for the DC modified-Ward
+pipeline.
+
+PSS/E sections that are present in the file but not consumed by the
+DC reduction (HVDC two-terminal / VSC lines, FACTS devices, impedance
+correction tables, multi-section line groupings, induction machines,
+GNE records) are skipped during parsing. Three-winding transformers
+are mapped to a synthetic star bus plus three equivalent branches,
+which matches MATPOWER's own `psse2mpc` convention.
 
 ## Things `simplenet` does that the MATLAB code does **not**
 

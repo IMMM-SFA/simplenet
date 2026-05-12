@@ -36,8 +36,9 @@ internal bus by shortest electrical distance.
 the full model's bus angles.
 
 It accepts MATPOWER `.m` files, the `matlab2*.xlsx` sheet workbook the
-TAMU workflow uses, or in-memory `pypower`-style dictionaries, and can
-be driven from Python or from a CLI.
+TAMU workflow uses, PSS/E `.RAW` v33 case files (the upstream format
+of the ACTIVSg synthetic grids), or in-memory `pypower`-style
+dictionaries, and can be driven from Python or from a CLI.
 
 ## Why a Python port?
 
@@ -66,13 +67,16 @@ Requires Python >=3.11. The runtime dependencies are `numpy`, `scipy`,
 
 ```python
 from simplenet import reduce_network
-from simplenet.io import load_m, load_xlsx, load_excluded_nodes, dump_xlsx
+from simplenet.io import load_m, load_raw, load_xlsx, load_excluded_nodes, dump_xlsx
 
 # Option A: load a MATPOWER .m case file directly
 case = load_m("matlab/NetworkReduction2/test_9bus_case.m")
 
 # Option B: load the TAMU matlab2*.xlsx workbook
 case = load_xlsx("matlab/matlab2_WECC.xlsx")
+
+# Option C: load a PSS/E v33 .RAW (e.g. ACTIVSg10k.RAW)
+case = load_raw("ACTIVSg10k.RAW")
 
 excluded = load_excluded_nodes("matlab/expected_output/excluded_nodes.csv")
 

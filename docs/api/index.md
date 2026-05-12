@@ -20,6 +20,7 @@ from simplenet import (
 from simplenet.io import (
     load_m,
     load_xlsx,
+    load_raw,
     dump_xlsx,
     load_excluded_nodes,
 )
@@ -57,5 +58,6 @@ from simplenet.io import (
 | [`simplenet.redistribute`](redistribute.md) | Load redistribution on the reduced model |
 | [`simplenet.io.matpower`](io_matpower.md) | MATPOWER `.m` parser |
 | [`simplenet.io.xlsx`](io_xlsx.md) | `matlab2*.xlsx` reader / writer |
+| [`simplenet.io.psse`](io_psse.md) | PSS/E `.RAW` (v33) parser |
 | [`simplenet.io.csv_loader`](io_csv.md) | `excluded_nodes.csv` reader |
 | [`simplenet.cli`](cli.md) | Command-line interface |
