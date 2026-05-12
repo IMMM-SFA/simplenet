@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+message: "If you use simplenet in academic work, please cite both this software and the original MATLAB toolbox it ports (see preferred-citation below)."
+type: software
+title: "simplenet: a Python implementation of the TAMU DC modified-Ward network reduction toolbox"
+abstract: >-
+  simplenet is a from-scratch Python port of the TAMU DC modified-Ward
+  network reduction MATLAB code. It eliminates a user-specified set of
+  external buses from a MATPOWER-style power-system case, produces an
+  equivalent reduced network with new equivalent branches between
+  boundary buses and a bus-shunt adjustment that absorbs all branch
+  shunts, relocates external generators to the nearest internal bus by
+  shortest electrical distance, and redistributes loads so that a DC
+  power flow on the reduced model reproduces the full-model bus
+  angles. The hand-rolled partial-LU factorisation of the MATLAB
+  original is replaced with an algebraically equivalent Kron reduction
+  implemented on top of scipy.sparse.
+version: "0.1.0"
+date-released: "2026-05-12"
+license: BSD-3-Clause
+repository-code: "https://github.com/IMMM-SFA/simplenet"
+url: "https://immm-sfa.github.io/simplenet/"
+keywords:
+  - power-systems
+  - network-reduction
+  - ward-reduction
+  - kron-reduction
+  - matpower
+  - dc-power-flow
+  - python
+authors:
+  - family-names: Vernon
+    given-names: Chris R.
+    email: chris.vernon@pnnl.gov
+    affiliation: Pacific Northwest National Laboratory
+    orcid: "https://orcid.org/0000-0002-3406-6214"
+  - family-names: Akdemier
+    given-names: Kerem Ziya
+    email: kerem.akdemier@pnnl.gov
+    affiliation: Pacific Northwest National Laboratory
+    orcid: "https://orcid.org/0000-0002-4532-3319"
+  - family-names: Qian
+    given-names: Jingwei
+    email: jqian4@ncsu.edu
+    affiliation: North Carolina State University
+    orcid: "https://orcid.org/0009-0009-2580-0163"
+preferred-citation:
+  type: article
+  title: "An Optimization-Based DC-Network Reduction Method"
+  authors:
+    - family-names: Zhu
+      given-names: Yujia
+    - family-names: Tylavsky
+      given-names: Daniel
+  journal: "IEEE Transactions on Power Systems"
+  year: 2018
+  volume: 33
+  issue: 3
+  start: 2509
+  end: 2517
+  doi: 10.1109/TPWRS.2017.2755728
+references:
+  - type: article
+    title: "Grid Structural Characteristics as Validation Criteria for Synthetic Networks"
+    authors:
+      - family-names: Birchfield
+        given-names: Adam B.
+      - family-names: Xu
+        given-names: Ti
+      - family-names: Gegner
+        given-names: Kathleen M.
+      - family-names: Shetye
+        given-names: Komal S.
+      - family-names: Overbye
+        given-names: Thomas J.
+    journal: "IEEE Transactions on Power Systems"
+    year: 2017
+    volume: 32
+    issue: 4
+    start: 3258
+    end: 3265
+    doi: 10.1109/TPWRS.2016.2616385

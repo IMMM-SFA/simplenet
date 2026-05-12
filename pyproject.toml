@@ -9,7 +9,11 @@ description = "Python implementation of the TAMU DC modified-Ward network reduct
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "BSD-3-Clause" }
-authors = [{ name = "simplenet contributors" }]
+authors = [
+    { name = "Chris R. Vernon", email = "chris.vernon@pnnl.gov" },
+    { name = "Kerem Akdemier", email = "kerem.akdemier@pnnl.gov" },
+    { name = "Jingwei Qian", email = "jqian4@ncsu.edu" }
+]
 keywords = [
     "power-systems",
     "network-reduction",
