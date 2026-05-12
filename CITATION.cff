@@ -1,5 +1,10 @@
 cff-version: 1.2.0
-message: "If you use simplenet in academic work, please cite both this software and the original MATLAB toolbox it ports (see preferred-citation below)."
+message: >-
+  If you use simplenet in academic work, please cite this software using the
+  metadata in this file. We also recommend citing the original MATLAB toolbox
+  that simplenet ports (Zhu & Tylavsky, 2018) and, where relevant, the
+  synthetic test systems used for validation (Birchfield et al., 2017); both
+  are listed under `references`.
 type: software
 title: "simplenet: a Python implementation of the TAMU DC modified-Ward network reduction toolbox"
 abstract: >-
@@ -43,23 +48,24 @@ authors:
     email: jqian4@ncsu.edu
     affiliation: North Carolina State University
     orcid: "https://orcid.org/0009-0009-2580-0163"
-preferred-citation:
-  type: article
-  title: "An Optimization-Based DC-Network Reduction Method"
-  authors:
-    - family-names: Zhu
-      given-names: Yujia
-    - family-names: Tylavsky
-      given-names: Daniel
-  journal: "IEEE Transactions on Power Systems"
-  year: 2018
-  volume: 33
-  issue: 3
-  start: 2509
-  end: 2517
-  doi: 10.1109/TPWRS.2017.2755728
 references:
   - type: article
+    scope: "Original MATLAB toolbox that simplenet ports."
+    title: "An Optimization-Based DC-Network Reduction Method"
+    authors:
+      - family-names: Zhu
+        given-names: Yujia
+      - family-names: Tylavsky
+        given-names: Daniel
+    journal: "IEEE Transactions on Power Systems"
+    year: 2018
+    volume: 33
+    issue: 3
+    start: 2509
+    end: 2517
+    doi: 10.1109/TPWRS.2017.2755728
+  - type: article
+    scope: "Synthetic test systems used for validation."
     title: "Grid Structural Characteristics as Validation Criteria for Synthetic Networks"
     authors:
       - family-names: Birchfield
